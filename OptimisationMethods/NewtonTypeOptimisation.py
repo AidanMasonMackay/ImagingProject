@@ -35,12 +35,12 @@ def lbfgs(x0, func, grad, lineSearchMethod="pythonStrongWolfe", timeout = 60, ma
         """
     start = time.time() # record start time
 
-    if not logger:
-        logger = logging.getLogger(__name__)
-        file_handler = logging.FileHandler('LBFGS.log')
-        formatter = logging.Formatter('%(asctime)s:%(message)s')
-        logger.addHandler(file_handler)
-        logger.setLevel(logging.DEBUG)
+#     if not logger:
+#         logger = logging.getLogger(__name__)
+#         file_handler = logging.FileHandler('LBFGS.log')
+#         formatter = logging.Formatter('%(asctime)s:%(message)s')
+#         logger.addHandler(file_handler)
+#         logger.setLevel(logging.DEBUG)
 
     lineSearchMethods = ["Armijo", "strongWolfe", "pythonStrongWolfe"]
     if lineSearchMethod == "Armijo":
